@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{7749506F-DC92-450F-B47F-38AE52357FB6}</ProjectGuid>
+    <ProjectGuid>{2C4B9891-FA48-4DDA-B60B-786B19A4420E}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MassTransitTest.Consumer</RootNamespace>
-    <AssemblyName>MassTransitTest.Consumer</AssemblyName>
+    <RootNamespace>MassTransit.SubscriptionService</RootNamespace>
+    <AssemblyName>MassTransit.SubscriptionService</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
@@ -35,8 +35,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Magnum, Version=2.0.0.4, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\MassTransit.Stomp\Magnum.dll</HintPath>
+    </Reference>
+    <Reference Include="MassTransit, Version=2.1.410.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\MassTransit.Stomp\MassTransit.dll</HintPath>
+    </Reference>
+    <Reference Include="MassTransit.Transports.Stomp">
+      <HintPath>..\lib\MassTransit.Stomp\MassTransit.Transports.Stomp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,10 +57,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MassTransitTest.csproj">
+      <Project>{F056E97A-A63D-4BCB-8A5E-AD12190D66E2}</Project>
+      <Name>MassTransitTest</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
