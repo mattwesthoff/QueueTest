@@ -1,6 +1,0 @@
-<Modules>
-  <Module PersistentId="CF39D622-F5C7-44E5-B2CF-7DE1D5EDD031" ModuleId="RabbitMqTest.Receive" />
-  <Module PersistentId="0C9344E6-A77E-4C7F-ACD8-88052618B76F" ModuleId="RabbitMqTest.Send" />
-  <Module PersistentId="05148619-D220-4B39-8D5E-39BDFD8FAA75" ModuleId="RabbitMqTest.NewTask" />
-  <Module PersistentId="41FD07F6-5985-44C1-8C04-BD65C4E28F8D" ModuleId="RabbitMqTest.Worker" />
-</Modules>
