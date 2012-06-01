@@ -1,0 +1,16 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "title";
+    Layout = "../Shared/_Layout.cshtml";
+}
+
+<h2>start a job</h2>
+@{
+    Html.BeginForm();
+    @Html.TextBox("JobName")
+}
+<input type="submit"/>
+@{
+    Html.EndForm();
+}
